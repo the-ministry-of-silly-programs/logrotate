@@ -17,7 +17,7 @@ end
 # Configure logrotate entries
 node['logrotate']['entries'].each do |entry, data|
     template entry do
-        path "#{node['logrotate']['path']}/#{entry}"
+        path "/etc/logrotate.d/#{entry}"
         source 'logrotate.erb'
         owner 'root'
         group 'root'
