@@ -13,3 +13,18 @@ end
 unless node['logrotate']['entries']
     return
 end
+
+# Configure logrotate entries
+node['logrotate']['entries'].each do |entry, data|
+    template entry do
+        path "#{node['logrotate']['path']}/#{entry}"
+        source 'logrotate.erb'
+        owner 'root'
+        group 'root'
+        mode  0644
+        action :create
+        variables ({
+            data: data
+        })
+    end
+end
