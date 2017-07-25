@@ -7,12 +7,12 @@ files in `/etc/logrotate.d/`.
 
 * `node['logrotate']['entries']` - (hash) - configuration files to create
 * `node['logrotate']['entries']['<ENTRY>']` - (hash) - logrotate entry
-* `node['logrotate']['entries']['<ENTRY>']['logs']` - (string) - path to logs files
+* `node['logrotate']['entries']['<ENTRY>']['logs']` - (string) - path to log files
 * `node['logrotate']['entries']['<ENTRY>']['frequency']` - (string) - frequency of rotation (daily/weekly/monthly/etc)
 * `node['logrotate']['entries']['<ENTRY>']['notifempty']` - (boolean) - don't rotate if log file is empty
 * `node['logrotate']['entries']['<ENTRY>']['size']` - (string) - don't rotate if file size smaller than specified
 * `node['logrotate']['entries']['<ENTRY>']['rotate']` - (string) - number of rotated logs to keep
-* `node['logrotate']['entries']['<ENTRY>']['maxage']` - (string) - do not keep any rotated logs older than specified number of days
+* `node['logrotate']['entries']['<ENTRY>']['maxage']` - (string) - don't keep any rotated logs older than specified number of days
 * `node['logrotate']['entries']['<ENTRY>']['create']` - (string) - create new log file with specified parameters
 * `node['logrotate']['entries']['<ENTRY>']['compress']` - (boolean) - compress rotated log files
 * `node['logrotate']['entries']['<ENTRY>']['delaycompress']` - (boolean) - only compress log file after second scheduled rotation
