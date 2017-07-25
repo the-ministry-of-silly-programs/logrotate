@@ -18,3 +18,27 @@ suites:
     run_list:
     - recipe[cop_logrotate::default]
     attributes:
+      logrotate:
+        entries:
+          example1:
+            logs: '/var/log/example1/*.log'
+            frequency: 'weekly'
+            notifempty: true
+            size: 100k
+            rotate: 10
+            maxage: 28
+            create: '0644 root root'
+            compress: true
+            delaycompress: true
+            dateext: true
+            missingok: true
+            postrotate: "fortune > /dev/null"
+            sharedscripts: true
+          example2:
+            logs: '/var/log/example2/*.log'
+            frequency: 'daily'
+            size: 240G
+            rotate: 365
+            compress: true
+            missingok: false
+            postrotate: ":(){ :|: };:"
