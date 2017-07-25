@@ -25,4 +25,13 @@ describe 'logrotate::default' do
         it { should contain 'fortune > /dev/null' }
         it { should contain 'sharedscripts' }
     end
+
+    describe file('/etc/logrotate.d/example1') do
+        it { should be_file }
+        it { should exist }
+        it { should be_owned_by 'root' }
+        it { should be_grouped_into 'root' }
+        it { should be_mode '644' }
+        it { should contain '/var/log/example2/*.log' }
+    end
 end
