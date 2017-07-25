@@ -8,3 +8,8 @@
 package 'logrotate' do
     action :upgrade
 end
+
+# Bail if no logrotate entry attributes
+unless node['logrotate']['entries']
+    return
+end
