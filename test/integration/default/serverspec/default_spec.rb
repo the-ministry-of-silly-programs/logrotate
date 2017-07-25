@@ -26,7 +26,7 @@ describe 'logrotate::default' do
         it { should contain 'sharedscripts' }
     end
 
-    describe file('/etc/logrotate.d/example1') do
+    describe file('/etc/logrotate.d/example2') do
         it { should be_file }
         it { should exist }
         it { should be_owned_by 'root' }
