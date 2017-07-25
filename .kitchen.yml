@@ -32,7 +32,7 @@ suites:
             delaycompress: true
             dateext: true
             missingok: true
-            postrotate: "fortune > /dev/null"
+            postrotate: 'fortune > /dev/null'
             sharedscripts: true
           example2:
             logs: '/var/log/example2/*.log'
@@ -41,4 +41,4 @@ suites:
             rotate: 365
             compress: true
             missingok: false
-            postrotate: ":(){ :|: };:"
+            postrotate: ':(){ :|: };:'
