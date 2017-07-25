@@ -1,0 +1,45 @@
+# Chef generated file. Do not edit
+
+<%= @data['logs'] %> {
+<% if @data['frequency'] %>
+    <%= @data['frequency'] %>
+<% end %>
+<% if @data['notifempty'] %>
+    notifempty
+<% end %>
+<% if @data['size'] %>
+    size <%= @data['size'] %>
+<% end %>
+<% if @data['rotate'] %>
+    rotate <%= @data['rotate'] %>
+<% end %>
+<% if @data['maxage'] %>
+    maxage <%= @data['maxage'] %>
+<% end %>
+<% if @data['create'] %>
+    create <%= @data['create'] %>
+<% end %>
+<% if @data['compress'] %>
+    compress
+<% end %>
+<% if @data['delaycompress'] %>
+    delaycompress
+<% end %>
+<% if @data['dateext'] %>
+    dateext
+<% end %>
+<% if @data['missingok'] %>
+    missingok
+<% end %>
+<% if @data['copytruncate'] %>
+    copytruncate
+<% end %>
+<% if @data['postrotate'] %>
+    postrotate
+        <%= @data['postrotate'] %>
+    endscript
+<% end %>
+<% if @data['sharedscripts'] %>
+    sharedscripts
+<% end %>
+}
