@@ -32,6 +32,7 @@ suites:
             delaycompress: true
             dateext: true
             missingok: true
+            prerotate: 'echo ":wave:"'
             postrotate: 'fortune > /dev/null'
             sharedscripts: true
           example2:

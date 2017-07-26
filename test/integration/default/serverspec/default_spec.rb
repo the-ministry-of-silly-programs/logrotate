@@ -22,6 +22,7 @@ describe 'logrotate::default' do
         it { should contain 'delaycompress' }
         it { should contain 'dateext' }
         it { should contain 'missingok' }
+        it { should contain 'echo ":wave:"' }
         it { should contain 'fortune > /dev/null' }
         it { should contain 'sharedscripts' }
     end
