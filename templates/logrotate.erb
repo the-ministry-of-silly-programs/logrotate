@@ -34,6 +34,11 @@
 <% if @data['copytruncate'] %>
     copytruncate
 <% end %>
+<% if @data['prerotate'] %>
+    prerotate
+        <%= @data['prerotate'] %>
+    endscript
+<% end %>
 <% if @data['postrotate'] %>
     postrotate
         <%= @data['postrotate'] %>
