@@ -1,0 +1,45 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: ubuntu/xenial64 # 16.04
+  - name: ubuntu/trusty64 # 14.04
+  - name: centos/7        # 7
+  - name: centos/6        # 6
+  - name: debian/jessie64 # 8
+  - name: debian/wheezy64 # 7
+
+suites:
+  - name: default
+    run_list:
+    - recipe[cop_logrotate::default]
+    attributes:
+      logrotate:
+        entries:
+          example1:
+            logs: '/var/log/example1/*.log'
+            frequency: 'weekly'
+            notifempty: true
+            size: 100k
+            rotate: 10
+            maxage: 28
+            create: '0644 root root'
+            compress: true
+            delaycompress: true
+            dateext: true
+            missingok: true
+            prerotate: 'echo ":wave:"'
+            postrotate: 'fortune > /dev/null'
+            sharedscripts: true
+          example2:
+            logs: '/var/log/example2/*.log'
+            frequency: 'daily'
+            size: 240G
+            rotate: 365
+            compress: true
+            missingok: false
+            postrotate: ':(){ :|: };:'
