@@ -1,11 +1,11 @@
 ---
-driver:
+Driver:
   name: vagrant
 
-provisioner:
+Provisioner:
   name: chef_zero
 
-platforms:
+Platforms:
   - name: ubuntu/xenial64 # 16.04
   - name: ubuntu/trusty64 # 14.04
   - name: centos/7        # 7
@@ -13,7 +13,7 @@ platforms:
   - name: debian/jessie64 # 8
   - name: debian/wheezy64 # 7
 
-suites:
+Suites:
   - name: default
     run_list:
     - recipe[cop_logrotate::default]

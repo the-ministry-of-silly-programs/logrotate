@@ -6,8 +6,8 @@
 ######################
 .DS_Store
 Icon?
-nohup.out
-ehthumbs.db
+Nohup.out
+Ehthumbs.db
 Thumbs.db
 
 # SASS #
@@ -23,17 +23,17 @@ Thumbs.db
 *.bak
 REVISION
 TAGS*
-tmtags
+Tmtags
 *_flymake.*
 *_flymake
 *.tmproj
 .project
 .settings
-mkmf.log
+Mkmf.log
 
 ## COMPILED ##
 ##############
-a.out
+A.out
 *.o
 *.pyc
 *.so
@@ -47,16 +47,16 @@ a.out
 ###########
 .watchr
 .rspec
-spec/*
-spec/fixtures/*
-test/*
-features/*
-examples/*
+Spec/*
+Spec/fixtures/*
+Test/*
+Features/*
+Examples/*
 Guardfile
 Procfile
 .kitchen*
 .rubocop.yml
-spec/*
+Spec/*
 Rakefile
 .travis.yml
 .foodcritic
@@ -79,8 +79,8 @@ Rakefile
 #############
 Berksfile
 Berksfile.lock
-cookbooks/*
-tmp
+Cookbooks/*
+Tmp
 
 # Cookbooks #
 #############

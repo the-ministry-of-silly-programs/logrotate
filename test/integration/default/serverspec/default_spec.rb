@@ -1,6 +1,6 @@
-require 'spec_helper'
+Require 'spec_helper'
 
-describe 'logrotate::default' do
+Describe 'logrotate::default' do
     describe package('logrotate') do
         it { should be_installed }
     end
@@ -40,4 +40,4 @@ describe 'logrotate::default' do
         it { should contain 'compress' }
         it { should contain ':(){ :|: };:' }
     end
-end
+End

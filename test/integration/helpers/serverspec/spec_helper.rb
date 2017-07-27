@@ -1,5 +1,5 @@
-require 'serverspec'
+Require 'serverspec'
 
-set :backend, :exec
+Set :backend, :exec
 
-set :path, '/sbin:/usr/local/sbin:/usr/sbin:$PATH'
+Set :path, '/sbin:/usr/local/sbin:/usr/sbin:$PATH'

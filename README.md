@@ -1,7 +1,7 @@
 # Logrotate Cookbook
 
 Manages the rotation of logs via the `logrotate` utility and configuration
-files in `/etc/logrotate.d/`.
+Files in `/etc/logrotate.d/`.
 
 ## Attributes
 
@@ -23,13 +23,13 @@ files in `/etc/logrotate.d/`.
 
 ### Example Role
 The following role will create `/etc/logrotate.d/example` with the
-specified settings.
+Specified settings.
 
 ```
-name 'logrotate'
-description 'Configure logrotate'
+Name 'logrotate'
+Description 'Configure logrotate'
 
-default_attributes({
+Default_attributes({
     logrotate: {
         entries: {
             example: {
@@ -51,7 +51,7 @@ default_attributes({
     }
 })
 
-run_list(
+Run_list(
     'recipe[cop_logrotate::default]'
 )
 ```

@@ -5,17 +5,17 @@
 #
 
 # Ensure logrotate is up to date
-package 'logrotate' do
+Package 'logrotate' do
     action :upgrade
-end
+End
 
 # Bail if no logrotate entry attributes
-unless node['logrotate']['entries']
+Unless node['logrotate']['entries']
     return
-end
+End
 
 # Configure logrotate entries
-node['logrotate']['entries'].each do |entry, data|
+Node['logrotate']['entries'].each do |entry, data|
     template entry do
         path "/etc/logrotate.d/#{entry}"
         source 'logrotate.erb'
@@ -27,4 +27,4 @@ node['logrotate']['entries'].each do |entry, data|
             data: data
         })
     end
-end
+End
